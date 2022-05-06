@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Demographic</title>
+</head>
+<body>
+   <h1 id="mainTitle">Demographic Info</h1>
+   <br><br>
+   <div id="mainDiv">
+       <div style="text-align : center">
+        <label for="gender">What is your gender: </label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other (Please Specify)</option>
+        </select>
+
+        <label for="other_gender">If other: </label>
+        <input type="text" id="other_gender" name="other_gender"><br><br>
+
+        <label for="age">Please select your age bracket: </label>
+        <select name="age" id="age">
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="65+">65+</option>
+        </select>
+        <br><br>
+        <label for="lowvision">Are you blind or have low vision?</label>
+        <select name="lowvision" id="lowvision">
+            <option value="blind">Blind</option>
+            <option value="lowvision">Low Vision</option>
+            <option vlaue="neither">Neither</option>
+        </select>
+       </div>
+       <br><br>
+       <button type="button" class="btn btn-danger" onclick="returnToConsent()">Back</button>
+       <button type="button" class="btn btn-secondary" onclick="sendDemographicInfo()">Continue</button>
+   </div>
+
+   <div class="modal fade" id="demographic_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Must specify gender if other.</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please specify your gender in the other text box.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
+  <script src="../static/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+  <script src="../static/js/utils.js"></script>
+</body>
+</html>

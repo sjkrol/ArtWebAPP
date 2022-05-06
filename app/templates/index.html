@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+   <div>&nbsp;</div> 
+   <div id="mainDiv">
+        <h1 id="mainTitle">Computational Creativity in a Low Vision World</h1>
+        <ul>
+            <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('experiment') }}">Experiment</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li style="float:right"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+   </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+    "a-cow-in-a-landscape" : 
+        {
+            "Title" : "A Cow in a Landscape",
+            "Artist" : "Constant Troyon",
+            "Year" : "(1830/1865)",
+            "ArtistPic" : "/images/constant-troyon.jpg",
+            "ArtistDesc" : "Constant Troyon was a French painter of the Barbizon school. In the early part of his career he painted mostly landscapes. It was only comparatively late in life that Troyon found his métier as a painter of animals, and achieved international recognition.",
+            "ArtistBirthDeath" : "1810-1865",
+            "PaintingDesc" : "This oil canvas painting depicts a single cow in a green and brown field. The exact year this painting was created is unknown." 
+        },
+
+    "a-saddled-race-horse-tied-to-a-fence-1828" : 
+        {
+            "Title" : "A Saddled Race Horse Tied to a Fence",
+            "Artist" : "Horace Vernet",
+            "Year" : "1828",
+            "ArtistPic" : "/images/horace-vernet.jpg",
+            "ArtistDesc" : "Émile Jean-Horace Vernet, more commonly known as simply Horace Vernet, was a French painter of battles, portraits, and Orientalist subjects.",
+            "ArtistBirthDeath" : "1789-1863",
+            "PaintingDesc" : "Horace Vernet enjoyed royal patronage, one of his earliest commissions was a group of ten paintings depicting Napoleon's horses. These works reveal his indebtedness to the English tradition of horse painting. The present painting was commissioned in Paris in 1828 by Jean-Georges Schickler, a member of a German based banking family, who had a passion for horse racing. As the name suggests, it depicts a single race horse tied to a fence."
+        },
+
+    "herdsman-with-resting-cattle" : 
+        {
+            "Title" : "Herdsman with Resting Cattle",
+            "Artist" : "Jacob van Strij",
+            "Year" : "(1780/1815)",
+            "ArtistPic" : "/images/jacob-van-strij.jpg",
+            "ArtistDesc" : "Jacob van Strij was Dutch painter, printmaker, and draftsman who was mainly interested in landscape painting, including mountain landscapes, winter landscapes and marines.",
+            "ArtistBirthDeath" : "1756-1815",
+            "PaintingDesc" : "This neoclassicism painting depecits a herdsman and his family on a hill with their cattle. Set during the day, we see sheep and cows resting together with a dog seated next to the herdsman."
+        },
+    
+    "hip-hip-hurrah-1888" : 
+        {
+            "Title" : "Hip, Hip, Hurrah!",
+            "Artist" : "Peder Severin Krøyer",
+            "Year" : "1888",
+            "ArtistPic" : "/images/peder-serverin-kroyer.jpg",
+            "ArtistDesc" : "Peder Severin Krøyer, also known as P. S. Krøyer, was a Danish painter.",
+            "ArtistBirthDeath" : "1851-1909",
+            "PaintingDesc" : "The work shows various members of what Krøyer referred to as the 'guild' of Skagen Painters: a group of Danish, Norwegian and Swedish artists who formed a loose community in Skagen at the northern tip of Jutland in the 1880s and early 1890s."
+        },
+
+    "james-abercromby-of-tullibody-esq-1779" :
+        {
+            "Title" : "James Abercromby of Tullibody, Esq.",
+            "Artist" : "David Allan",
+            "Year" : "1779",
+            "ArtistPic" : "/images/david-allan.jpg",
+            "ArtistDesc" : "David Allan was a Scottish painter, limner, and illustrator, best known for historical subjects and genre works.",
+            "ArtistBirthDeath" : "1744-1796",
+            "PaintingDesc" : "A romanticism potrait of a fictional girl in a white dress outside. She is accompanied by both a dog and a bird."
+        },
+
+    "paris-a-rainy-day-1877" : 
+        {
+            "Title" : "Paris Street, Rainy Day",
+            "Artist" : "Gustave Caillebotte",
+            "Year" : "1877",
+            "ArtistPic" : "/images/gustave-caillebotte.jpg",
+            "ArtistDesc" : "Gustave Caillebotte was a French painter who was a member and patron of the Impressionists, although he painted in a more realistic manner than many others in the group. Caillebotte was known for his early interest in photography as an art form.",
+            "ArtistBirthDeath" : "1848-1894",
+            "PaintingDesc" : "Paris Street; Rainy Day is a large 1877 oil painting by the French artist Gustave Caillebotte, and is his best known work. It shows a number of individuals walking through the Place de Dublin, then known as the Carrefour de Moscou, at an intersection to the east of the Gare Saint-Lazare in north Paris."
+        },
+    
+    "tennis-triptych-centre-panel-1930" :
+        {
+            "Title" : "Tennis (triptych, centre panel)",
+            "Artist" : "Eric Ravilious",
+            "Year" : "1930",
+            "ArtistPic" : "/images/eric-ravilious.jpeg",
+            "ArtistDesc" : "Eric William Ravilious was a British painter, designer, book illustrator and wood-engraver. He grew up in Sussex, and is particularly known for his watercolours of the South Downs and other English landscapes, which examine English landscape and vernacular art with an off-kilter, modernist sensibility and clarity.",
+            "ArtistBirthDeath" : "1903 - 1942",
+            "PaintingDesc" : "The panels of this triptych decorated the door of Sir Geoffrey Fry's Music Room in Portman Square, London. Eric Ravilious based the tennis court on the Manor Gardens at Eastbourne and treated the panels as a continuous composition, with the game's progress and the players' gestures linking the three parts. This is the centre panel."
+        }
+}

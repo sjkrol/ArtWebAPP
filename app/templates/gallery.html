@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Experiment Page</title>
+</head>
+<body>
+    <div>&nbsp;</div> 
+    <div id="mainDiv">
+         <h1 id="mainTitle">Computational Creativity in a Low Vision World</h1>
+         <ul>
+             <li><a href="{{ url_for('index') }}">Home</a></li>
+             <li><a href="{{ url_for('about') }}">About</a></li>
+             <li><a href="{{ url_for('experiment') }}">Experiment</a></li>
+             <li><a class="active" href="{{ url_for('gallery') }}">Gallery</a></li>
+             <li style="float:right"><a href="{{ url_for('contact') }}">Contact</a></li>
+         </ul>
+    <div>&nbsp;</div> 
+    <div id="banner">
+        <div class="inline-block">
+           <img id="1" src="{{url_for('static', filename='images/paris-a-rainy-day-1877.jpg')}}" onclick="openImg(this.id)"/>
+           <div class="paintingTitle">Paris Street, Rainy Day - 1877</div>
+           <div class="artistName">Gustave Caillebotte</div>
+        </div>
+        <div class="inline-block">
+           <img id="2" src="{{url_for('static', filename='images/hip-hip-hurrah-1888.jpg')}}" onclick="openImg(this.id)"/>
+           <div class="paintingTitle">Hip, Hip, Hurrah! - 1888</div>
+           <div class="artistName">Peder Severin Krøyer</div>
+        </div>
+    </div>
+    <div>&nbsp;</div> 
+    <div id="banner">
+        <div class="inline-block">
+            <img id="3" src="{{url_for('static', filename='images/a-saddled-race-horse-tied-to-a-fence-1828.jpg')}}" onclick="openImg(this.id)"/>
+            <div class="paintingTitle">A Saddled Race Horse Tied to a Fence - 1828</div>
+            <div class="artistName">Horace Vernet</div>
+         </div>
+         <div class="inline-block">
+            <img id="4" src="{{url_for('static', filename='images/herdsman-with-resting-cattle.jpg')}}" onclick="openImg(this.id)"/>
+            <div class="paintingTitle">Herdsman with Resting Cattle - 1780/1815</div>
+            <div class="artistName">Jacob van Strij</div>
+         </div>
+    </div>
+    <div>&nbsp;</div> 
+    <div id="banner">
+        <div class="inline-block">
+            <img id="5" src="{{url_for('static', filename='images/a-cow-in-a-landscape.jpg')}}" onclick="openImg(this.id)"/>
+            <div class="paintingTitle">A Cow in a Landscape - (1810/1865)</div>
+            <div class="artistName">Constant Troyon</div>
+        </div>
+    </div>
+    <div>&nbsp;</div> 
+    <div id="banner">
+        <div class="inline-block">
+            <img id="6" src="{{url_for('static', filename='images/tennis-triptych-centre-panel-1930.jpg')}}" onclick="openImg(this.id)"/>
+            <div class="paintingTitle">Tennis (triptych, centre panel) - 1930</div>
+            <div class="artistName">Eric Ravilious</div>
+         </div>
+         <div class="inline-block">
+            <img id="7" src="{{url_for('static', filename='images/james-abercromby-of-tullibody-esq-1779.jpg')}}" onclick="openImg(this.id)"/>
+            <div class="paintingTitle">James Abercromby of Tullibody, Esq. - 1779</div>
+            <div class="artistName">David Allan</div>
+         </div>
+    </div>
+</div>
+    <script src="./static/js/utils.js"></script>
+</body>
+</html>

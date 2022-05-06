@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Painting Page</title>
+</head>
+<body>
+    <div>&nbsp;</div> 
+    <div id="mainDiv">
+         <h1 id="mainTitle">Computational Creativity in a Low Vision World</h1>
+         <ul>
+             <li><a href="{{ url_for('index') }}">Home</a></li>
+             <li><a href="{{ url_for('about') }}">About</a></li>
+             <li><a href="{{ url_for('experiment') }}">Experiment</a></li>
+             <li><a class="active" href="{{ url_for('gallery') }}">Gallery</a></li>
+             <li style="float:right"><a href="{{ url_for('contact') }}">Contact</a></li>
+         </ul>
+         <div>&nbsp;</div> 
+         <div>
+            <h2>{{title}} - {{year}}</h2>
+            <video class="video" autoplay="autoplay" controls="controls" preload="preload">
+                <source src="{{ url_for('static', filename=video_name) }}" type="video/mp4"></source>
+            </video>
+            <p>
+                {{paintingdesc}}
+            </p>
+        </div>
+        <div>&nbsp;</div> 
+        <div class="artInfo">
+            
+            <div id="banner">
+                <div class="artist-inline">
+                    <img src="{{url_for('static', filename=artistpic)}}"/>
+                    <div class="artistInfo">{{artist}} ({{artistbirthdeath}})</div>
+                </div>
+                <div>
+                    <p style="vertical-align: middle;">{{artistDesc}}</p>
+                </div>
+            </div>
+    </div>
+    <div>
+        <button class="btn btn-secondary" type="button" onclick="returnToGallery()">Return to Gallery</button>
+    </div>
+    </div>
+    <div>&nbsp;</div> 
+    <script src="../static/js/utils.js"></script>
+</body>
+</html>

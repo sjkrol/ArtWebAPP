@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>About Page</title>
+</head>
+<body>
+   <div>&nbsp;</div> 
+   <div id="mainDiv">
+        <h1 id="mainTitle">Computational Creativity in a Low Vision World</h1>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a class="active" href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('experiment') }}">Experiment</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li style="float:right"><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+       <div>
+           &nbsp;
+       </div>
+       <p id="introductionPara">
+        In order to make the artwork more accessible, some museums provide audio guides and tactile plates. Whilst these methods do improve
+        the accessibility of the artwork, they fail to create an aesthetic experience for the individual. This work introduces an automatic
+        system designed to improve the accessibility of visual art by creating this aesthetic experience for people with vision impairments. It
+        does this by analysing a piece of art and creating a musical experience that conveys the perceived emotion as well as information
+        about the scenery depicted in the artwork.
+       </p>
+       <div>&nbsp;</div>
+       <img src="{{url_for('static', filename='images/system_diagram.png')}}"/>
+       <div id="figureInfo">Figure 1:  System Diagram: Depicts the various tasks performed by the system to generate the output music.</div>
+       <div>&nbsp;</div>
+    </div>
+</body>
+</html>

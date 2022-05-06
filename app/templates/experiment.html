@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Experiment Page</title>
+</head>
+<body>
+    <div>&nbsp;</div> 
+    <div id="mainDiv">
+         <h1 id="mainTitle">Computational Creativity in a Low Vision World</h1>
+         <ul>
+             <li><a href="{{ url_for('index') }}">Home</a></li>
+             <li><a href="{{ url_for('about') }}">About</a></li>
+             <li><a class="active" href="{{ url_for('experiment') }}">Experiment</a></li>
+             <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+             <li style="float:right"><a href="{{ url_for('contact') }}">Contact</a></li>
+         </ul>
+    </div>
+    <div>&nbsp;</div> 
+    <div class="explanatory">
+        <h3>Explanatory Statement</h3>
+        <div>Project ID: 27781</div>
+        <div>Project title: Computational Creativity in a Low Vision World</div>
+        <div>&nbsp;</div> 
+        <h4>What does this research involve?</h4>
+        <p>Visual artwork has mostly been inaccessible to those with vision impairments. Some museums/art galleries may provide audio guides or tactile plates to improve the accessibility of their art; however, these methods fail to convey an aesthetic experience to the individual. </p>
+        <p>In this study, we aim to gather feedback on a system designed to create this aesthetic experience for the visually impaired. The engine takes visual artwork and uses it to generate music that attempts to convey the art's general emotion as well as provide information on various objects within the art.
+         Participants will listen to various pieces of music and answer simple questionnaires designed to understand their experience. </p>
+        <h4>Consent and Withdrawal</h4>
+        <p>Being in this study is voluntary and you are under no obligation to consent to participate. Even if you do consent to participate, you may withdraw your consent at any stage during the user study and we will destroy your responses. However, you cannot withdraw from the user study once you have submitted your responses and left the room. This is because we store the responses without any identity information and so it is not possible for us to identify which response was yours. </p>
+        <h4>Confidentialty and Data Storage</h4>
+        <p>The responses that you give will be stored without any identifiable information. We will analyse the responses after we have collected all the responses from other participants. Thus, we will not use any personal information in the academic publications that will report the results of this study.</p>
+        <p>Data collected will be stored in accordance with Monash University regulations by the Chief Investigator. A report of the study may be submitted for publication, but individual participants will not be identifiable in such a report. The data will be destroyed when it is no longer required.</p>
+        <div style="text-align : right;">
+            <button class="btn btn-secondary" type="button" onclick="beginExperiment()">Begin Study</button>
+        </div>
+        <div>&nbsp;</div> 
+    </div>
+    <script src="./static/js/utils.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Consent Form</title>
+</head>
+<body>
+    <div>&nbsp;</div> 
+   <h1 id="mainTitle">Consent Form</h1>
+   <div>&nbsp;</div> 
+   <div class="explanatory">
+        <table class="table">
+            <tr>
+                <th>I consent to the following: </th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td>To be a participant in this study and understand that I can withdraw from the study at any time, without having to give a reason.</td>
+                <td><input id="C1" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>If I decide to withdraw from the study, anonymised data can no longer be removed from after the end of the recorded session.</td>
+                <td><input id="C2" type="checkbox"></td> 
+            </tr>
+            <tr>
+                <td>Personal information collected about me that can identify me, such as my name or where I live, will not be shared beyond the study team.</td>
+                <td><input id="C3" type="checkbox"></td> 
+            </tr>
+            <tr>
+                <td>I agree that my information (i.e. answers to questionnaires) can be quoted in research outputs.</td>
+                <td><input id="C4" type="checkbox"></td> 
+            </tr>
+            <tr>
+                <td>I agree for the answers that I provide to be deposited in Monash University Research Repository so it can be used for future research and learning. I understand that this excludes commercial use; and access restrictions are applied to anyone not involved in the study.</td>
+                <td><input id="C5" type="checkbox"></td> 
+            </tr>
+            <tr>
+                <td>I agree for questionnaire answers to be used for publications and website materials.</td>
+                <td><input id="C6" type="checkbox"></td> 
+            </tr>
+        </table>
+        <div style="text-align : right;">
+            <button class="btn btn-danger" type="button" onclick="returnToExplanatory()">Return</button>
+            <button class="btn btn-secondary" type="button" onclick="goToDemographic()">Continue</button>
+        </div>
+   </div>
+   
+   <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please complete consent form before continuing</h4>
+        </div>
+        <div class="modal-body">
+          <p>To continue with this study you must consent to all the points listed. If you choose not to consent, you can still view the art and music via the gallery tab. </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<script src="../static/js/jquery-3.2.1.slim.min.js"></script>
+<script src="../static/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+<script src="../static/js/utils.js"></script>
+    
+</body>
+</html>

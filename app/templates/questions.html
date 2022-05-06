@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/likert-scale.css') }}" -->
+    <title>Questions</title>
+</head>
+<script>
+    function goBack(){
+        if("{{painting_n}}" == 0){
+            window.location.href = "/experiment/demographic";
+        } else {
+            request = new XMLHttpRequest();
+            request.open('POST', '/experiment/questions/back');
+
+            request.onreadystatechange = function() {
+            if(request.readyState == XMLHttpRequest.DONE && request.status == 200) {
+                window.location.href = "/experiment/questions";
+            }
+        }
+
+        request.send();
+        }
+    }
+</script>
+<body>
+    <br><br>
+    <div id="mainDiv">
+        <h1>{{title}} - {{year}}</h1>
+        <h4 style="font-style : italic;">{{artist}}</h4>
+        <video class="video" controls="controls" preload="preload">
+            <source src="{{ url_for('static', filename=video_name) }}" type="video/mp4"></source>
+        </video>
+        <p>
+            {{paintingdesc}}
+        </p>
+    <br><br>
+
+    <table class="table">
+        <tr>
+            <th>Statement</th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Somewhat disagree</th>
+            <th>Neither agree nor disagree</th>
+            <th>Somewhat agree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr>
+            <td>The music provided a pleasant experience.</td>
+            <td><input type="radio" value="1", name="pleasant"></td>
+            <td><input type="radio" value="2", name="pleasant"></td>
+            <td><input type="radio" value="3", name="pleasant"></td>
+            <td><input type="radio" value="4", name="pleasant"></td>
+            <td><input type="radio" value="5", name="pleasant"></td>
+            <td><input type="radio" value="6", name="pleasant"></td>
+            <td><input type="radio" value="7", name="pleasant"></td>
+        </tr>
+        <tr>
+            <td>The music was representative of the painting.</td>
+            <td><input type="radio" value="1", name="pleasant"></td>
+            <td><input type="radio" value="2", name="pleasant"></td>
+            <td><input type="radio" value="3", name="pleasant"></td>
+            <td><input type="radio" value="4", name="pleasant"></td>
+            <td><input type="radio" value="5", name="pleasant"></td>
+            <td><input type="radio" value="6", name="pleasant"></td>
+            <td><input type="radio" value="7", name="pleasant"></td>
+        </tr>
+    </table>
+    <div style="text-align : right;">
+        <button type="button" class="btn btn-danger" onclick="goBack()">Back</button>
+        <button type="continue" class="btn btn-secondary" onclick="save_responses()">Continue</button>
+    </div>
+    <br><br>
+</div>
+<script src="../static/js/utils.js"></script>
+</body>
+</html>
