@@ -75,7 +75,7 @@ def demographic():
 
     if request.method == 'GET':
         # assign user ID
-        participant_id = now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        participant_id = now = datetime.now().strftime("%d%m%Y%H%M%S")
 
         session["participant_id"] = participant_id
         session["data"] = {
@@ -94,6 +94,9 @@ def demographic():
             session["data"]["demographic"]["gender"] = demographic['other']
         else:
             session["data"]["demographic"]["gender"] = demographic['gender']
+        session["data"]["responses"] = []
+
+        session.modified = True
         
         # set painting index
         session["painting_n"] = 0
@@ -101,38 +104,62 @@ def demographic():
 
         return 'success', 200
 
-@app.route('/experiment/questions')
+@app.route('/experiment/questions', methods=["GET", "POST"])
 def questions():
     
     if request.method == 'GET':
-        print(session["painting_n"])
-        painting_name = paintings[session["painting_n"]]
-        painting_data = art_data[painting_name]
-        video_name = "/videos/" + painting_name + ".mp4"
 
-        template = render_template("questions.html",
-                               video_name=video_name,
-                               title=painting_data["Title"],
-                               artist=painting_data["Artist"],
-                               year=painting_data["Year"],
-                               paintingdesc=painting_data["PaintingDesc"],
-                               painting_n=session["painting_n"])
+        try:
+            painting_name = paintings[session["painting_n"]]
+            painting_data = art_data[painting_name]
+            video_name = "/videos/" + painting_name + ".mp4"
+            template = render_template("questions.html",
+                                video_name=video_name,
+                                title=painting_data["Title"],
+                                artist=painting_data["Artist"],
+                                year=painting_data["Year"],
+                                paintingdesc=painting_data["PaintingDesc"],
+                                painting_n=session["painting_n"])
+            session["painting_n"] += 1
 
-        session["painting_n"] += 1
+        except IndexError:
 
+            filename = f'static/data/{session["data"]["demographic"]["id"]}.json'
+            with open(filename, "w") as f:
+                json.dump(dict(session["data"]), f)
+            template = render_template("thankyou.html")
         return template
+    
+    if request.method == 'POST':
+
+        responses = json.loads(request.data)
+        painting = paintings[session["painting_n"]-1]
+        session["data"]["responses"].append({"painting" : painting,
+                                             "pleasant" : responses["pleasant"], 
+                                             "representative" : responses["representative"]})
+        session.modified=True
+
+        return 'success', 200
 
 @app.route('/experiment/questions/back', methods=["POST"])
 def experiment_back():
 
     if request.method == "POST":
 
-        painting_n = int(session["painting_n"])
+        # pop previous data
+        session["data"]["responses"].pop()
+        painting_n = session["painting_n"]
         painting_n -= 1
-        print(painting_n)
         session["painting_n"] = painting_n
+
+        session.modified = True
     
     return 'success', 200
+
+@app.route("/thankyou")
+def thankyou():
+
+    return render_template("thankyou.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")

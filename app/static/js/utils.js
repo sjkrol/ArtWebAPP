@@ -15,7 +15,6 @@ function openImg(id){
   }
 
   request.send();
-
 }
 
 function returnToGallery(){
@@ -82,5 +81,27 @@ function sendDemographicInfo(){
 }
 
 function save_responses(){
-    window.location.href = "/experiment/questions"
+
+  // retrieve data
+  pleasant = document.querySelector('input[name="pleasant"]:checked');
+  representative = document.querySelector('input[name="representative"]:checked');
+
+  if(pleasant === null || representative === null){
+    $('#questionsModal').modal('show');
+  } else {
+    const request = new XMLHttpRequest();
+    sender = JSON.stringify({"pleasant" : pleasant.value, "representative" : representative.value});
+    request.open('POST', '/experiment/questions');
+    
+    request.onreadystatechange = function() {
+      if(request.readyState == XMLHttpRequest.DONE && request.status == 200) {
+        window.location.href = "/experiment/questions";
+      }
+    }
+    request.send(sender);
+  }
+}
+
+function returnToIndex(){
+  window.location.href = "/";
 }
