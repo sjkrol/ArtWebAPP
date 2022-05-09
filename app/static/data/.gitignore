@@ -1,0 +1,3 @@
+# this is here to ensure the static/data is pushed to git
+*
+!.gitignore
