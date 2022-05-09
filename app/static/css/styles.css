@@ -75,6 +75,13 @@ video {
     margin-left: 20px;
 }
 
+.inline-block-sensi {
+    max-width: 35%; 
+    max-height: 35%;
+    margin-right: 20px;
+    float : left;
+}
+
 .artist-inline {
     display: inline-block;
     max-width: 40%; 
@@ -87,6 +94,13 @@ video {
     height : 90%;
     width : 100%;
     text-align : center;
+}
+
+#banner-sensi {
+    height : 100%;
+    width : 100%;
+    text-align : left;
+    vertical-align: top;
 }
 
 .paintingTitle{
@@ -122,4 +136,8 @@ video {
 
 .consent_checklist {
     display : inline;
+}
+
+.contact-info{
+    margin-bottom: 0;
 }
