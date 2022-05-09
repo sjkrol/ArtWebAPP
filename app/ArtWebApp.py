@@ -20,7 +20,7 @@ with open("static/json/art-info.json") as f:
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("about.html")
 
 @app.route("/about")
 def about():
