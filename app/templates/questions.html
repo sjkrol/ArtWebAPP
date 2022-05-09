@@ -70,9 +70,14 @@
             <td><input type="radio" value="7", name="representative"></td>
         </tr>
     </table>
-    <div style="text-align : right;">
-        <button type="button" class="btn btn-danger" onclick="goBack()">Back</button>
-        <button type="continue" class="btn btn-secondary" onclick="save_responses()">Continue</button>
+    <div>
+        <div style="float : left;">
+            <button type="button" class="btn btn-danger" onclick="leaveExperimentModal()">Leave Experiment</button>
+        </div>
+        <div style="float: right">
+            <button type="button" class="btn btn-danger" onclick="goBack()">Back</button>
+            <button type="continue" class="btn btn-secondary" onclick="save_responses()">Continue</button>
+        </div>
     </div>
     <br><br>
 </div>
@@ -82,7 +87,6 @@
     
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Please answer all questions</h4>
         </div>
         <div class="modal-body">
@@ -95,6 +99,27 @@
       
     </div>
   </div>
+
+  <div class="modal fade" id="leaveExperimentModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Attention</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to leave the study?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-default" onclick="leaveExperiment()">Yes</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
 <script src="../static/js/jquery-3.2.1.slim.min.js"></script>
 <script src="../static/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="../static/js/utils.js"></script>

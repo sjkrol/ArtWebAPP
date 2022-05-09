@@ -105,3 +105,11 @@ function save_responses(){
 function returnToIndex(){
   window.location.href = "/";
 }
+
+function leaveExperimentModal(){
+  $('#leaveExperimentModal').modal('show');
+}
+
+function leaveExperiment(){
+  window.location.href = "/gallery";
+}
