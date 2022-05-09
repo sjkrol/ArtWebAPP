@@ -149,7 +149,7 @@ def experiment_back():
         # pop previous data
         session["data"]["responses"].pop()
         painting_n = session["painting_n"]
-        painting_n -= 1
+        painting_n -= 2
         session["painting_n"] = painting_n
 
         session.modified = True
